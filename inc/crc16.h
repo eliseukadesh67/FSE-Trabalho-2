@@ -13,6 +13,6 @@
 
 short CRC16(short crc, char data);
 short calcula_CRC(unsigned char *commands, int size);
-int validate_CRC(u_char *recieved_data);
+int validate_CRC(u_char *recieved_data, size_t numbytes, short recieved_crc);
 
 #endif /* CRC16_H_ */

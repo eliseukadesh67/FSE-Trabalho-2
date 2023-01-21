@@ -56,11 +56,9 @@ short calcula_CRC(u_char *commands, int size)
   return crc;
 }
 
-int validate_CRC(u_char *recieved_data)
+int validate_CRC(u_char *recieved_data, size_t numbytes, short recieved_crc)
 {
-  short calculated_crc = (short)calcula_CRC(recieved_data, 7);
-
-  short recieved_crc = (short)recieved_data[7];
+  short calculated_crc = (short)calcula_CRC(recieved_data, numbytes);
 
   return calculated_crc != recieved_crc;
 }
