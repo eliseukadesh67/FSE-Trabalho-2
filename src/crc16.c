@@ -62,8 +62,5 @@ int validate_CRC(u_char *recieved_data)
 
   short recieved_crc = (short)recieved_data[7];
 
-  printf("CRC recebido: 0x%x\n", (short)recieved_crc);
-  printf("CRC calculado: 0x%x\n", (short)calculated_crc);
-
   return calculated_crc != recieved_crc;
 }
