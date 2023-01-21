@@ -8,6 +8,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define DEBUG 0
+
 int open_uart_stream();
 void close_uart_stream(int uart_stream);
 int write_uart_stream(int uart_stream, unsigned char *tx_buffer, int bytes);

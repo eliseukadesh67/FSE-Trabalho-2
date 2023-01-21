@@ -15,7 +15,9 @@ int open_uart_stream()
   }
   else
   {
-    printf("UART inicializada!\n");
+    #if DEBUG == 1
+      printf("UART inicializada!\n");
+    #endif
   }
 
   return uart0_filestream;
@@ -34,15 +36,21 @@ int write_uart_stream(int uart_stream, unsigned char *tx_buffer, int bytes)
 
   if (uart_stream != -1)
   {
-    printf("Escrevendo caracteres na UART ...");
+    #if DEBUG == 1
+      printf("Escrevendo caracteres na UART ...");
+    #endif
     count = write(uart_stream, &tx_buffer[0], bytes);
     if (count < 0)
     {
-      printf("UART TX error\n");
+      #if DEBUG == 1
+        printf("UART TX error\n");
+      #endif
     }
     else
     {
-      printf("escrito.\n");
+      #if DEBUG == 1
+        printf("escrito.\n");
+      #endif
     }
   }
   return count;
@@ -54,12 +62,16 @@ int read_uart_stream(int uart_stream, unsigned char *rx_buffer, int bytes)
 
   int rx_length = read(uart_stream, (void *)rx_buffer, bytes); // Filestream, buffer to store in, number of bytes to read (max)
   if (rx_length < 0)
-  {
-    fprintf(stderr, "Erro na leitura.\n"); // An error occured (will occur if there are no bytes)
+  { 
+    #if DEBUG == 1
+      fprintf(stderr, "Erro na leitura.\n"); // An error occured (will occur if there are no bytes)
+    #endif
   }
   else if (rx_length == 0)
   {
-    printf("Nenhum dado disponível.\n"); // No data waiting
+    #if DEBUG == 1
+      printf("Nenhum dado disponível.\n"); // No data waiting
+    #endif
   }
 
   return rx_length;
