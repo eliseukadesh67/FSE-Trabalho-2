@@ -23,7 +23,7 @@ int get_info_uart(const char subcode, char *data)
 
   write_uart_stream(uart_stream, tx_buffer, 9);
 
-  usleep(100000);
+  usleep(500000);
 
   int numbytes = read_uart_stream(uart_stream, rx_buffer, 9);
 
@@ -69,7 +69,7 @@ int send_info_uart(const char subcode, char *info, size_t info_size, char *respo
 
   write_uart_stream(uart_stream, tx_buffer, 9 + info_size);
 
-  usleep(100000);
+  usleep(500000);
 
   free(tx_buffer);
 
