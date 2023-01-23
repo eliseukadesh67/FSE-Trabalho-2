@@ -4,18 +4,6 @@ FILE *csv_log_file;
 
 static char log_buffer[256] = "";
 
-static pthread_mutex_t buffer_mutex = PTHREAD_MUTEX_INITIALIZER;
-
-static void lock_buffer()
-{
-  pthread_mutex_lock(&buffer_mutex);
-}
-
-static void unlock_buffer()
-{
-  pthread_mutex_unlock(&buffer_mutex);
-}
-
 void init_csv_log()
 {
   csv_log_file = fopen("temperature_logs.csv", "w+");
