@@ -27,16 +27,16 @@ int get_info_uart(const char subcode, char *data)
 
   int numbytes = read_uart_stream(uart_stream, rx_buffer, 9);
 
-  #if DEBUG == 1
-    printf("Bytes lidos: %d\n", numbytes);
-  #endif
+#ifdef DEBUG
+  printf("Bytes lidos: %d\n", numbytes);
+#endif
   close_uart_stream(uart_stream);
 
   if (!validate_CRC(rx_buffer, numbytes - 2, rx_buffer[numbytes - 2]))
   {
-    #if DEBUG == 1
-      fprintf(stderr, "Erro de crc!\n");
-    #endif
+#ifdef DEBUG
+    fprintf(stderr, "Erro de crc!\n");
+#endif
     return -1;
   }
 
@@ -75,16 +75,16 @@ int send_info_uart(const char subcode, char *info, size_t info_size, char *respo
 
   int numbytes = read_uart_stream(uart_stream, rx_buffer, 9);
 
-  #if DEBUG == 1
-    printf("Bytes lidos: %d\n", numbytes);
-  #endif
+#ifdef DEBUG
+  printf("Bytes lidos: %d\n", numbytes);
+#endif
   close_uart_stream(uart_stream);
 
   if (!validate_CRC(rx_buffer, numbytes - 2, (short)rx_buffer[numbytes - 2]))
   {
-    #if DEBUG == 1
-      fprintf(stderr, "Erro de crc!\n");
-    #endif
+#ifdef DEBUG
+    fprintf(stderr, "Erro de crc!\n");
+#endif
     return -1;
   }
 
@@ -98,11 +98,11 @@ float get_internal_temperature()
   const char subcode = GET_INTERNAL_TEMPERATURE_SUBCODE;
   char data[4];
   float temp;
-  
+
   get_info_uart(subcode, data);
 
   memcpy(&temp, data, 4);
-  
+
   return (float)temp;
 }
 
@@ -111,11 +111,11 @@ float get_reference_temperature()
   const char subcode = GET_REFERENCE_TEMPERATURE_SUBCODE;
   char data[4];
   float temp;
-  
+
   get_info_uart(subcode, data);
 
   memcpy(&temp, data, 4);
-  
+
   return (float)temp;
 }
 
@@ -124,11 +124,11 @@ int read_user_command()
   const char subcode = GET_USER_COMMAND_SUBCODE;
   char data[4];
   int temp;
-  
+
   get_info_uart(subcode, data);
 
   memcpy(&temp, data, 4);
-  
+
   return (int)temp;
 }
 
