@@ -97,8 +97,10 @@ void *menu()
         system("clear");
         printf("Kp: ");
         scanf("%le", &kp);
+        getchar();
         printf("Ki: ");
         scanf("%le", &ki);
+        getchar();
         printf("Kd: ");
         scanf("%le", &kd);
         getchar();
@@ -173,8 +175,7 @@ void update_temperature()
     usleep(10000);
   }
 
-  while (get_bme280_temp(&recievedExternalTemp) != BME280_OK)
-    ;
+  get_bme280_temp(&recievedExternalTemp);
 
   usleep(10000);
 
@@ -201,6 +202,7 @@ void shutdown()
   send_control_signal(0);
   stop_warming();
   turn_off_oven();
+  switch_temperature_mode();
   close_csv_log();
   exit(0);
 }
