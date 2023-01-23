@@ -5,8 +5,6 @@
 #include "codes.h"
 #include "crc16.h"
 
-#define DEBUG 0
-
 int get_info_uart(const char subcode, char *data);
 int send_info_uart(const char subcode, char *info, size_t info_size, char *response);
 float get_internal_temperature();
