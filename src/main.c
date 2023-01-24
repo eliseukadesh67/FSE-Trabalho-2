@@ -140,6 +140,7 @@ void pwm()
   float controle = pid_controle(internalTemp);
   int onPin, offPin;
   int val = controle;
+  resistorSignal = fanSignal = 0;
   if (controle > 0)
   {
     onPin = RESISTOR;
