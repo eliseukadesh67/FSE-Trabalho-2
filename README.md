@@ -66,3 +66,7 @@ As medições dos gráficos foram realizadas num intervalo de aproximadamente 5 
 **Potência do Resistor e Ventoinha no tempo**
 
 ![Curva de temperatura (% Resitor e % Ventoinha)](./graficos/temperatura-referencia-fixa(%25resistor%26%25ventoinha).png "Curva de temperatura (% Resistor e % Ventoinha)")
+
+## Apresentação
+
+A apresentação deste trabalho pode ser acessada através deste link: [Apresentação - Trabalho 2](https://www.youtube.com/watch?v=80PLBp2DEBA)
