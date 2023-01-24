@@ -79,7 +79,14 @@ As medições dos gráficos foram realizadas num intervalo de aproximadamente 5 
 
 <center>
 
-![Temperatura Fixa (% Resitor e % Ventoinha)](./graficos/curva-temperatura(%25resistor%26%25ventoinha).png "Temperatura Fixa (% Resitor e % Ventoinha)")
+![Temperatura Fixa (% Resitor e % Ventoinha)](./graficos/temperatura-referencia-fixa(%25resistor%26%25ventoinha).png "Temperatura Fixa (% Resitor e % Ventoinha)")
+</center>
+
+**Temperaturas do sistema no tempo**
+
+<center>
+
+![Temperatura Fixa (Temperaturas do Sistema)](./graficos/temperatura-referencia-fixa(temperaturas).png "Temperatura Fixa (Temperaturas do Sistema)")
 </center>
 
 ### 2. Gráfico de curva de temperatura
@@ -88,7 +95,14 @@ As medições dos gráficos foram realizadas num intervalo de aproximadamente 5 
 
 <center>
 
-![Curva de temperatura (% Resitor e % Ventoinha)](./graficos/temperatura-referencia-fixa(%25resistor%26%25ventoinha).png "Curva de temperatura (% Resistor e % Ventoinha)")
+![Curva de temperatura (% Resitor e % Ventoinha)](./graficos/curva-temperatura(%25resistor%26%25ventoinha).png "Curva de temperatura (% Resistor e % Ventoinha)")
+</center>
+
+**Temperaturas do sistema no tempo**
+
+<center>
+
+![Curva de temperatura (Temperaturas do Sistema)](./graficos/curva-temperatura(temperaturas).png "Curva de temperatura (Temperaturas do Sistema)")
 </center>
 
 ## Apresentação
