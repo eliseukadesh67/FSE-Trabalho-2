@@ -33,7 +33,7 @@ As medições dos gráficos de temperatura fixa foram realizados num intervalo d
 
 **Potência do Resitor e Ventoinha a cada minuto**
 
-[!Temperatura Fixa (% Resitor e % Ventoinha)](./graficos/curva-temperatura(%25resistor%26%25ventoinha).png "Temperatura Fixa (% Resitor e % Ventoinha)")
+![Temperatura Fixa (% Resitor e % Ventoinha)](./graficos/curva-temperatura(%25resistor%26%25ventoinha).png "Temperatura Fixa (% Resitor e % Ventoinha)")
 
 
 ### 2. Gráfico de curva de temperatura
@@ -42,4 +42,4 @@ As medições dos gráficos de temperatura fixa foram realizados num intervalo d
 
 **Potência do Resitor e Ventoinha no tempo**
 
-[!Curva de temperatura (% Resitor e % Ventoinha)](./graficos/temperatura-referencia-fixa(%25resistor%26%25ventoinha).png "Curva de temperatura (% Resitor e % Ventoinha)")
+![Curva de temperatura (% Resitor e % Ventoinha)](./graficos/temperatura-referencia-fixa(%25resistor%26%25ventoinha).png "Curva de temperatura (% Resitor e % Ventoinha)")
